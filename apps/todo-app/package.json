@@ -1,0 +1,8 @@
+{
+  "name": "@todo-app-scim-demo/todo-app",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "todo-app"
+  }
+}
