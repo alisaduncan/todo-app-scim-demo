@@ -6,8 +6,14 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/todo-app',
   server:{
-    port: 4200,
+    port: 3000,
     host: 'localhost',
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3333',
+        secure: false
+      }
+    }
   },
   preview:{
     port: 4300,

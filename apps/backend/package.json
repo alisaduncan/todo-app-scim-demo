@@ -1,0 +1,28 @@
+{
+  "name": "@todo-app-scim-demo/backend",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "serve": {
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "@todo-app-scim-demo/backend:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "@todo-app-scim-demo/backend:build:development"
+          },
+          "production": {
+            "buildTarget": "@todo-app-scim-demo/backend:build:production"
+          }
+        }
+      }
+    }
+  }
+}
